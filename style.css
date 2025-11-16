@@ -1,0 +1,185 @@
+ /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #eef2ff;
+  color: #1c1c1c;
+}
+
+/* HEADER */
+header {
+  background: #0057ff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* NAV LINKS DESKTOP */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 10px 18px;
+  background: #0041cc;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: #003199;
+}
+
+/* HAMBURGER ICON */
+.menu-icon {
+  display: none;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  padding: 60px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 40px;
+  color: #0034a8;
+}
+
+.hero p {
+  margin-top: 10px;
+  color: #333;
+}
+
+/* CARD */
+.card {
+  background: #fff;
+  margin: 30px auto;
+  width: 90%;
+  max-width: 900px;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* CONTACT FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+textarea {
+  height: 120px;
+}
+
+button {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  background: #0057ff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0040c4;
+}
+
+/* TODO LIST */
+.todo-box {
+  display: flex;
+  gap: 10px;
+}
+
+#taskList {
+  margin-top: 15px;
+  list-style: none;
+}
+
+#taskList li {
+  background: #e5e7eb;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#taskList li:hover {
+  background: #d1d5db;
+  text-decoration: line-through;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: #0057ff;
+  color: white;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* ============================
+   MOBILE RESPONSIVE
+============================ */
+@media (max-width: 768px) {
+
+  /* Show menu icon */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Hide nav links by default */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #0041cc;
+    padding: 15px;
+    border-radius: 12px;
+    position: absolute;
+    top: 80px;
+    right: 25px;
+    width: 180px;
+  }
+
+  /* When active (JS toggles) */
+  nav ul.show {
+    display: flex;
+  }
+
+  nav a {
+    width: 100%;
+  }
+}
